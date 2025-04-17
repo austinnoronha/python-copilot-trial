@@ -18,7 +18,7 @@ Replace file_path with the path to the desired platform's JSON file.
 Run the script to see the normalized output.
 """
 
-import json
+import json, os
 
 class PostNormalizer:
     """A class to normalize post data from different platforms into a common structure."""
@@ -41,6 +41,9 @@ class PostNormalizer:
         Returns:
             list: A list of dictionaries representing the platform-specific posts.
         """
+        if not os.path.exists(self.file_path):
+            raise FileNotFoundError(f"File not found: {self.file_path}")
+        
         with open(self.file_path, 'r', encoding='utf-8') as file:
             return json.load(file)
 
