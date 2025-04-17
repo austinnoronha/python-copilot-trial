@@ -3,8 +3,6 @@ import json
 import pytest
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
 
-import pytest
-import json
 from unittest.mock import patch, mock_open
 from app import app
 
@@ -109,3 +107,21 @@ def test_post_by_platform_unexpected_error(mock_post_normalizer, mock_open_file,
     # Assert the response
     assert response.status_code == 500
     assert response.json == {"error": "An unexpected error occurred"}
+
+def test_404_error(client):
+    """Test the custom 404 error handler."""
+    # Send GET request to a non-existent route
+    response = client.get("/nonexistent")
+
+    # Assert the response
+    assert response.status_code == 400
+    assert response.json == {"error": "Invalid platform name"}
+
+def test_xss_attack(client):
+    """Test the '/<platform>' endpoint for XSS attack prevention."""
+    # Send GET request with an XSS payload
+    response = client.get("/Tiktok%3Cscript%3Ealert('XSS')%3C/script%3E")
+
+    # Assert the response
+    assert response.status_code == 404
+    assert response.json == {"error": "The requested resource was not found"}
