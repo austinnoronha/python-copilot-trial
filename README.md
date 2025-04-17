@@ -1,4 +1,4 @@
-# Python/Flask Tutorial
+# Python Post Normalizer (Sample)
 
 ## Overview
 The **Platform Post Normalizer** is a Python application designed to process and normalize post data from various social media platforms. Each platform has its own JSON data structure, and this application maps those structures to a common format (`text`, `summary`, `translated_text`, `media_url`) for easier processing and analysis.
