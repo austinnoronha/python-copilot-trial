@@ -1,0 +1,29 @@
+{
+    "Tiktok": {
+        "file_path": "./data/tiktok.json",
+        "mapping": {
+            "text": "text",
+            "summary": "text_summary",
+            "translated_text": "text_translation",
+            "media_url": "media_url"
+        }
+    },
+    "Telegram": {
+        "file_path": "./data/telegram.json",
+        "mapping": {
+            "text": "tel_text",
+            "summary": "tel_text_summary",
+            "translated_text": "tel_text_translation",
+            "media_url": "media_url"
+        }
+    },
+    "Twitter": {
+        "file_path": "./data/twitter.json",
+        "mapping": {
+            "text": "tweet",
+            "summary": "tweet_summary",
+            "translated_text": "tweet_translation",
+            "media_url": "media_url"
+        }
+    }
+}

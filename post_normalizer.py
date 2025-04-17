@@ -23,14 +23,16 @@ import json
 class PostNormalizer:
     """A class to normalize post data from different platforms into a common structure."""
 
-    def __init__(self, file_path):
+    def __init__(self, file_path, mapping):
         """
-        Initialize the PostNormalizer with the path to the platform's JSON file.
+        Initialize the PostNormalizer with the path to the platform's JSON file and mapping.
         
         Args:
             file_path (str): Path to the JSON file containing platform-specific data.
+            mapping (dict): A dictionary defining the mapping of platform-specific keys to common keys.
         """
         self.file_path = file_path
+        self.mapping = mapping
 
     def load_data(self):
         """
@@ -42,12 +44,12 @@ class PostNormalizer:
         with open(self.file_path, 'r', encoding='utf-8') as file:
             return json.load(file)
 
-    def normalize_telegram_data(self, data):
+    def normalize_data(self, data):
         """
-        Normalize Telegram-specific data to the common structure.
+        Normalize platform-specific data to the common structure using the provided mapping.
         
         Args:
-            data (list): List of dictionaries containing Telegram-specific post data.
+            data (list): List of dictionaries containing platform-specific post data.
         
         Returns:
             list: List of dictionaries with normalized post data.
@@ -55,10 +57,8 @@ class PostNormalizer:
         normalized_data = []
         for post in data:
             normalized_post = {
-                "text": post.get("tel_text", ""),  # Original text
-                "summary": post.get("tel_text_summary", ""),  # Summary of the text
-                "translated_text": post.get("tel_text_translation", ""),  # Translated text
-                "media_url": post.get("media_url", "")  # Media URL
+                common_key: post.get(platform_key, "")  # Map platform-specific keys to common keys
+                for common_key, platform_key in self.mapping.items()
             }
             normalized_data.append(normalized_post)
         return normalized_data
@@ -73,8 +73,5 @@ class PostNormalizer:
         # Load the raw data
         data = self.load_data()
 
-        # Check the file name to determine the platform and normalize accordingly
-        if "telegram" in self.file_path.lower():
-            return self.normalize_telegram_data(data)
-        else:
-            raise NotImplementedError("Normalization for this platform is not implemented yet.")
+        # Normalize the data using the mapping
+        return self.normalize_data(data)
