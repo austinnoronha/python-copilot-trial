@@ -1,0 +1,82 @@
+[
+    {
+        "tweet_id": "1444388227025731769",
+        "tweet": "Of the 33,000-plus donors on @ossoff's disclosure",
+        "tweet_translation": "",
+        "tweet_summary": "The tweet talks about a financial or political update.",
+        "tweet_sentiment": "neutral",
+        "media_url": "https://pbs.twimg.com/media/Fh3b6kZXYAAWsdR.jpg"
+    },
+    {
+        "tweet_id": "1101356891453872471",
+        "tweet": "Markets saw a major shift today, as reported by @business",
+        "tweet_translation": "",
+        "tweet_summary": "The post summarizes recent developments in tech or business.",
+        "tweet_sentiment": "positive",
+        "media_url": "https://pbs.twimg.com/media/Fo1g3h8XkAAG2rj.jpg"
+    },
+    {
+        "tweet_id": "3229237292322157694",
+        "tweet": "New funding round closed by the startup community",
+        "tweet_translation": "",
+        "tweet_summary": "This is about social or political protests.",
+        "tweet_sentiment": "positive",
+        "media_url": "https://pbs.twimg.com/media/Fp4x7hBXsAMsOa5.jpg"
+    },
+    {
+        "tweet_id": "2344441150397758368",
+        "tweet": "Recent protests spark global conversations",
+        "tweet_translation": "",
+        "tweet_summary": "Environmental concerns are the core of this discussion.",
+        "tweet_sentiment": "neutral",
+        "media_url": "https://pbs.twimg.com/media/Fh3b6kZXYAAWsdR.jpg"
+    },
+    {
+        "tweet_id": "8547780157514945634",
+        "tweet": "Climate change talks resume at the summit",
+        "tweet_translation": "",
+        "tweet_summary": "The tweet involves reforms or legal changes.",
+        "tweet_sentiment": "negative",
+        "media_url": "https://pbs.twimg.com/media/Fv8e0mWakAYPfd1.jpg"
+    },
+    {
+        "tweet_id": "2406057772146062553",
+        "tweet": "New policy reforms introduced in parliament",
+        "tweet_translation": "",
+        "tweet_summary": "Technological innovation is highlighted here.",
+        "tweet_sentiment": "positive",
+        "media_url": "https://pbs.twimg.com/media/Fo1g3h8XkAAG2rj.jpg"
+    },
+    {
+        "tweet_id": "2210296099171166338",
+        "tweet": "Groundbreaking tech unveiled at the expo",
+        "tweet_translation": "",
+        "tweet_summary": "Public opinion on healthcare is featured.",
+        "tweet_sentiment": "positive",
+        "media_url": "https://pbs.twimg.com/media/Fv8e0mWakAYPfd1.jpg"
+    },
+    {
+        "tweet_id": "1783749776423664147",
+        "tweet": "Healthcare remains a top issue among voters",
+        "tweet_translation": "",
+        "tweet_summary": "Media coverage around celebrities is central.",
+        "tweet_sentiment": "positive",
+        "media_url": "https://pbs.twimg.com/media/Fz8c4ZXWIAEmjRv.jpg"
+    },
+    {
+        "tweet_id": "7994612926011722798",
+        "tweet": "Celebrity news dominates headlines this week",
+        "tweet_translation": "",
+        "tweet_summary": "This speaks to economic issues and uncertainty.",
+        "tweet_sentiment": "neutral",
+        "media_url": "https://pbs.twimg.com/media/Fz8c4ZXWIAEmjRv.jpg"
+    },
+    {
+        "tweet_id": "2201868471274214158",
+        "tweet": "Economic outlook remains uncertain amid tensions",
+        "tweet_translation": "",
+        "tweet_summary": "The message captures a significant funding update.",
+        "tweet_sentiment": "positive",
+        "media_url": "https://pbs.twimg.com/media/Fh3b6kZXYAAWsdR.jpg"
+    }
+]
